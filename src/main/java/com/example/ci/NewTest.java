@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class NewTest {
-    private String ex;
+    private String exe;
 }
