@@ -30,6 +30,14 @@ jobs:
         with:
           java-version: '17'
           distribution: 'corretto'
+
+      - name: Set Yml
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: ./src/main/resources/application.yml
+        env:
+          my.ec2: ${{ secrets.EC2 }}
+
       - name: Build with Gradle
         run: ./gradlew test
   
